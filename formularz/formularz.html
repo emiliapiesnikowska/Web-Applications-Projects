@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Najlepsze przepisy!</title>
+    <meta name="description" content="Blog dotyczący kuchni wegańskiej. Przedstawienie przepisów na wegańskie dania i napoje." />
+    <meta name="keywords" content="gotowanie, przepisy, wegańskie" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Emilia Pieśnikowska" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="javascript.js"></script>
+    
+   
+</head>
+
+<body>
+
+    <header>
+            <h1 id="logo"> WEGAŃSKIE PRZEPISY</h1>
+       
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">STRONA GŁÓWNA</a></li>
+                <li>
+                    <a href="przepisy.html">PRZEPISY</a>
+                    <ul class="submenu">
+                        <li> nwm </li>
+                        <li> nwm</li>
+                        <li> nwm</li>
+
+                    </ul>
+                </li>
+                <li><a href="formularz.html">FORMULARZ</a></li>
+                <li><a href="contact.html">KONTAKT</a></li>
+
+            </ul>
+            <div id="photos" class="photos">
+                <figure class="photo">
+                    <img src="zdjecia/matcha.jpg" />
+                </figure>
+                <figure class="photo">
+                    <img src="zdjecia/curry.jpg" />
+                </figure>
+                <figure class="photo1">
+                    <img src="zdjecia/bowl.jpg" />
+                </figure>
+                <figure class="photo">
+                    <img src="zdjecia/mieta.jpg" />
+                </figure>
+                <figure class="photo">
+                    <img src="zdjecia/tost.jpg" />
+                </figure>
+                <figure class="photo">
+                    <img src="zdjecia/green.jpg" />
+                </figure>
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <main>
+        <article>
+            <h1>MASZ CHWILĘ?</h1>
+            <h2>Pomóż nam udoskonalić naszą stronę poprzez wypełnienie krótkiego formularza. Zajmie Ci to dwie minuty!</h2>
+            <div id="zegar"> </div>
+            
+
+                <form action="formularz.html" method="post" enctype="text/plain">
+                    <div id="tabela">
+                        <table class="edited">
+                            <tr>
+                                <td>Imię:</td>
+                                <td><input type="text" name="imie"></td>
+                            </tr>
+                            <tr>
+                                <td>Ile masz lat?</td>
+                                <td>
+                                    <input type="text" id="wiek" name="wiek">
+                                    <input type="submit" value="Wprowadź" onclick="sprawdz()" />
+                                    <div id="ilosclat"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jaką lubisz kuchnię (możesz zaznaczyć więcej możliwości)?</td>
+                                <td>
+                                    <input type="checkbox" name="Kuchnia" value="Meksykańska">Meksykańska
+                                    <br>
+                                    <input type="checkbox" name="Kuchnia" value="Hinduska">Hinduska
+                                    <br>
+                                    <input type="checkbox" name="Kuchnia" value="Grecka">Grecka
+                                    <br>
+                                    <input type="checkbox" name="Kuchnia" value="Włoska">Włoska
+                                    <br>
+                                    <input type="checkbox" name="Kuchnia" value="Azjatycka">Azjatycka
+                                    <br>
+                                    <input type="checkbox" name="Kuchnia" value="Inna">Inna (podaj jaka):
+                                    <input name="Kuchnia">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jaka jest Twoja dieta na codzień?</td>
+                                <td>
+                                    <select name="Dieta">
+                                        <option selected>Wegańska</option>
+                                        <option>Wegetariańska</option>
+                                        <option>Bezglutenowa</option>
+                                        <option>Niskowęglowodanowa</option>
+                                        <option>Niskotłuszczowa</option>
+                                        <option>Inna</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jak dowiedziałeś/aś się o moim blogu (możesz wybrać kilka opcji trzymając klawisz Ctrl)?</td>
+                                <td>
+                                    <select name="Źródło" multiple size="4">
+                                        <option selected>YouTube</option>
+                                        <option>Facebook</option>
+                                        <option>Instagram</option>
+                                        <option>Od przyjaciela</option>
+                                        <option>Inny</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jak długo interesujesz się gotowaniem?</td>
+                                <td>
+                                    <select name="Długość">
+                                        <option selected></option>
+                                        <option>Około pół roku</option>
+                                        <option>Rok</option>
+                                        <option>Półtora roku</option>
+                                        <option>Dwa lata lub dłużej</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Podaj swój komentarz:</td>
+                                <td>
+                                    <textarea name="Komentarz" cols="25" rows="5">Proszę, wpisz tutaj jakiś komentarz...</textarea><br>
+                                    <br>
+                                    <br>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <br>
+                                    <input type="submit" value="Wyślij">
+                                    <input type="reset" value="Wyczyść">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+
+                <div id="listazakupow">
+                    <h2>Lista Zakupów</h2>
+                    <button id="btnAddProject">Dodaj Listę</button>
+                    <div id="projects">
+                        <ul id="main">
+                            <li class="personal"><a href="#personal">Lista nr 1</a><span class="ui-icon-close"></span></li>
+                            <li class="personal"><a href="#work">Lista nr 2</a><span class="ui-icon-close"></span></li>
+                        </ul>
+                        <ol id="personal">
+                            <li><input type="checkbox" />Mleko roślinne</li>
+                            <li><input type="checkbox" />Cynamon </li>
+                        </ol>
+                        <ol id="work">
+                            <li><input type="checkbox" />Miód</li>
+                            <li><input type="checkbox" />Daktyle</li>
+                            <li><input type="checkbox" />Mandarynki </li>
+                        </ol>
+                    </div>
+                    <button id="btnAddTask">Dodaj Produkt</button>
+                    <div id="project-dialog" title="Dodaj Liste" style="display:none">
+                        <label for="new-project">Nazwa Listy</label><input id="new-project" type="text" />
+                    </div>
+                    <div id="task-dialog" title="Dodaj Produkt" style="display:none">
+                        <label for="new-task">Nazwa Produktu</label><input id="new-task" type="text" />
+                    </div>
+                </div>
+
+                </article>
+                </main>
+
+
+
+
+    <footer>
+                Najlepsze wegańskie przepisy Emilia Pieśnikowska &copy; wszelkie prawa zastrzeżone Masz jakieś pytania? <a href="mailto: emilia.piesnikowska@gmail.com">Kliknij, aby do mnie napisać!</a>
+
+                </footer>
+                </body>
+
+                </html>
